@@ -1,5 +1,5 @@
 import React from 'react';
-import AdminNavbar from '../navbars/AdminNavbar';
+import AdminNavbar from '../../navbars/AdminNavbar';
 import { Container, Row, Col } from 'react-bootstrap';
 import './AdminHome.css'; // Import the CSS file for custom styles
 import { useNavigate } from 'react-router-dom';
@@ -14,9 +14,9 @@ function AdminHome() {
       {/* <Image className="admin-home-background-image" crop="fill" cloudName="dzux2g6rf" publicId="https://res.cloudinary.com/dzux2g6rf/image/upload/v1685292369/HomeScreenbg_pgwmg8.webp"/> */}
       <Container className="admin-home-content">
         <Row>
-          <Col xs={12} md={6} lg={4} className="admin-home-col" onClick={() => navigate("/addCatagory")}>
+          <Col xs={12} md={6} lg={4} className="admin-home-col" onClick={() => navigate("/addProducts")}>
             <div>
-              Add Catagory
+              Add Products 
             </div>
           </Col>
           <Col xs={12} md={6} lg={4} className="admin-home-col" onClick={() => navigate("/viewAllCatagories")}>
@@ -24,9 +24,9 @@ function AdminHome() {
               View All Catagories
             </div>
           </Col>
-          <Col xs={12} md={6} lg={6} className="admin-home-col" onClick={() => navigate("/deleteCategory")}>
+          <Col xs={12} md={6} lg={6} className="admin-home-col" onClick={() => navigate("/deleteProducts")}>
             <div>
-              Delete Catagory
+              Delete Products
             </div>
           </Col>
         </Row>

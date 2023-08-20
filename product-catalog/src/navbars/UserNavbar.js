@@ -1,20 +1,10 @@
-import { useNavigate } from "react-router-dom";
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-//import Logout from "../Logins/Logout";
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-export const AdminNavbar = () => {
+export const UserNavbar = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false);
-
     const navigate = useNavigate();
-
-    const handleLogout = () => {
-        // Clear local storage and navigate to login page
-        localStorage.removeItem('currentUser');
-        navigate('/');
-    };
-
 
     const handleMenuClick = () => {
         setShowMenu(!showMenu);
@@ -24,12 +14,15 @@ export const AdminNavbar = () => {
         setShowDropdown(!showDropdown);
     };
 
+    const handleLogout = () => {
+        // Clear local storage and navigate to login page
+        localStorage.removeItem('currentUser');
+        navigate('/');
+    };
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/">
-                    Product Catalog App Admin
-                </Link>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -40,7 +33,12 @@ export const AdminNavbar = () => {
                 <div className={`collapse navbar-collapse ${showMenu ? 'show' : ''}`}>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/admin">
+                            <Link className="navbar-brand" to="/">
+                                Product Catalog App User
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/user">
                                 Home
                             </Link>
                         </li>
@@ -50,40 +48,40 @@ export const AdminNavbar = () => {
                                 href="#"
                                 onClick={handleDropdownClick}
                             >
-                                Admin CRUD
+                                User CRUD
                             </a>
                             <ul
                                 className={`dropdown-menu ${showDropdown ? 'show' : ''}`}
                                 aria-labelledby="navbarDropdown"
                             >
                                 <li>
-                                    <Link className="dropdown-item" to="/addProducts">
-                                        Add Catagory
+                                    <Link className="dropdown-item" to="/viewUserCategories">
+                                        View Categories
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className="dropdown-item" to="/viewAllCatagories">
-                                        View All Catagories
+                                    <Link className="dropdown-item" to="/userCart">
+                                        My Cart
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className="dropdown-item" to="/deleteProducts">
-                                        Delete Catagory
+                                    <Link className="dropdown-item" to="/viewUserOrders">
+                                        My Orders
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className="dropdown-item" to="/viewProfile">
+                                        My Profile
                                     </Link>
                                 </li>
                             </ul>
                         </li>
-                       
-                        
-
-
                         <li className="nav-item">
                             <Link className="nav-link" to="/about">
                                 About
                             </Link>
                         </li>
                     </ul>
-                  
                 </div>
                 <div>
                     <button
@@ -98,4 +96,4 @@ export const AdminNavbar = () => {
     );
 }
 
-export default AdminNavbar
+export default UserNavbar;

@@ -1,27 +1,25 @@
-import AdminHome from './components/AdminHome';
-import {Routes,Route} from 'react-router-dom';
-import {BrowserRouter as Router} from 'react-router-dom';
+import logo from './logo.svg';
 import './App.css';
-import AddCategory from './components/AddCatagory';
-import ViewAllCatagories from './components/ViewAllCatagories';
-import ViewCategoryItems from './components/ViewCategoryItems';
-import DeleteCatagory from './components/DeleteCatagory';
 
 function App() {
-
-  return(
-    <div>
-      <Router>
-        <Routes>
-        <Route path="/admin" Component={AdminHome}></Route>
-        <Route path="/addCatagory" Component ={AddCategory}></Route>
-        <Route path="/viewAllCatagories" Component={ViewAllCatagories}></Route>
-        <Route path="/viewCategoryItems" Componenent={ViewCategoryItems}></Route>
-        <Route path="/deleteCategory" Component = {DeleteCatagory}></Route>
-        </Routes>
-        </Router>
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
-  )
+  );
 }
 
 export default App;

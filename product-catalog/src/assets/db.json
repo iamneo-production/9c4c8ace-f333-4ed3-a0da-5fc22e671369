@@ -1,15 +1,127 @@
 {
-    "products": [
-      { "id": 1, "name": "Product A", "price": 10, "category": 1 },
-      { "id": 2, "name": "Product B", "price": 20, "category": 2 },
-      { "id": 3, "name": "Product C", "price": 30, "category": 3 }
-      
-    ],
-    "categories": [
-      { "id": 1, "name": "Electronics" },
-      { "id": 2, "name": "Clothing" },
-      { "id": 3, "name": "Books" }
-      
-    ]
-  }
-  
+  "products": [
+    {
+      "id": 1,
+      "name": "Product A",
+      "price": 10,
+      "category": 1
+    },
+    {
+      "id": 2,
+      "name": "Product B",
+      "price": 20,
+      "category": 2
+    },
+    {
+      "id": 3,
+      "name": "Product C",
+      "price": 30,
+      "category": 3
+    },
+    {
+      "id": 4,
+      "name": "Product D",
+      "price": 40,
+      "category": 3
+    },
+    {
+      "id": 5,
+      "name": "Product E",
+      "price": 50,
+      "category": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Clothing"
+    },
+    {
+      "id": 3,
+      "name": "Books"
+    },
+    {
+      "id": 4,
+      "name": "House Hold"
+    }
+  ],
+  "actors": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin@123",
+      "role": "admin"
+    },
+    {
+      "username": "Harsha",
+      "password": "namala@16",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "username": "yashu",
+      "password": "yashu@123",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "username": "rakesh",
+      "password": "rakesh@123",
+      "role": "user",
+      "id": 4
+    }
+  ],
+  "carts": [
+    {
+      "items": [],
+      "id": 1
+    },
+    {
+      "id": 2,
+      "items": [
+        {
+          "itemId": 3,
+          "quantity": 2
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "itemId": 3,
+          "quantity": 1
+        }
+      ],
+      "actorId": 1
+    },
+    {
+      "items": [],
+      "id": 3
+    },
+    {
+      "items": [],
+      "id": 4
+    },
+    {
+      "items": [],
+      "id": 5
+    },
+    {
+      "items": [],
+      "id": 6
+    },
+    {
+      "items": [],
+      "id": 7
+    },
+    {
+      "items": [],
+      "id": 8
+    }
+  ],
+  "orders": []
+}
